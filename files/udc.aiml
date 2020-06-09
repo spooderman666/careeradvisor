@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<!--Intro-->
+	<category>
+		<pattern>hello</pattern>
+		<template>
+            Hi!  I'm your virtual career advisor and I can help you decide what career is best for you based on your strengths and weaknesses.
+            Would you like to hear more about one of these careers or take a questionnaire to see which best suits you?
+			<!--Offers 5 suggestion careers and the questionairre button-->
+			<button>
+				<text>Cloud Computing Engineer</text>
+				<url>https://study.com/articles/cloud_computing_specialist_job_description_salary.html </url>
+			</button>
+			<button>
+				<text>Mobile Application Developer</text>
+				<url>https://www.toptal.com/app/job-description  </url>
+			</button>
+			<button>
+				<text>Network Architect</text>
+				<url> https://www.fieldengineer.com/skills/what-is-a-network-architect </url>
+			</button>
+			<button>
+				<text>Software Developer</text>
+				<url>https://www.betterteam.com/software-developer-job-description </url>
+			</button>
+			<button>
+				<text>Systems Analyst</text>
+				<url>https://www.pcc.edu/hr/employment/job-archive/systems-analyst/ </url>
+			</button>
+			<!--Begins questionairre button option-->
+			<button>
+				<text>Begin Questionairre</text>
+				<postback>cloud1</postback>
+			</button>
+		</template>
+	</category>
+	
+	<!--Questionairre-->
+	<!---Cloud computing questions-->
+	<category>
+		<pattern>cloud1</pattern>
+		<template>Are you good at working in a team?
+      
+			<button>
+				<text>yes</text>
+				<postback>cloud2</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>architect1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>cloud2</pattern>
+		<template>Do you have experience in networking?
+      
+			<button>
+				<text>yes</text>
+				<postback>cloud3</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>mobile1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>cloud3</pattern>
+		<template>Are you familiar with virtualization software?
+      
+			<button>
+				<text>yes</text>
+				<postback>cloudComputing</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>software1</postback>
+			</button>
+		</template>
+	</category>
+	<!--Mobile App Developer questions-->
+	<category>
+		<pattern>mobile1</pattern>
+		<template>Are you creative?
+      
+			<button>
+				<text>yes</text>
+				<postback>mobile2</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>cloud1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>mobile2</pattern>
+		<template>Do you have programming experience?
+      
+			<button>
+				<text>yes</text>
+				<postback>mobile3</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>analyst1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>mobile3</pattern>
+		<template>Are you familiar with iOS and android mobile operating systems?
+      
+			<button>
+				<text>yes</text>
+				<postback>mobileApp</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>architect1</postback>
+			</button>
+		</template>
+	</category>
+	<!--Network Architect questions-->
+	<category>
+		<pattern>architect1</pattern>
+		<template>Do you have experience in networking?
+      
+			<button>
+				<text>yes</text>
+				<postback>architect2</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>mobile1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>architect2</pattern>
+		<template>Do you have any project management experience?
+      
+			<button>
+				<text>yes</text>
+				<postback>architect3</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>software1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>architect3</pattern>
+		<template>Are you familiar working with wireless networks?
+      
+			<button>
+				<text>yes</text>
+				<postback>networkArchitect</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>cloud1</postback>
+			</button>
+		</template>
+	</category>
+	<!--Software Developer questions-->
+	<category>
+		<pattern>software1</pattern>
+		<template>Are you creative?
+      
+			<button>
+				<text>yes</text>
+				<postback>software2</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>analyst1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>software2</pattern>
+		<template>Do you have programming experience?
+      
+			<button>
+				<text>yes</text>
+				<postback>software3</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>architect1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>software3</pattern>
+		<template>Are you familiar with procedures for installing, upgrading, and developing software?
+      
+			<button>
+				<text>yes</text>
+				<postback>softwareDeveloper</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>mobile1</postback>
+			</button>
+		</template>
+	</category>
+	<!--Systems Analyst Questions-->
+	<category>
+		<pattern>analyst1</pattern>
+		<template>Do you have any project management experience?
+      
+			<button>
+				<text>yes</text>
+				<postback>analyst2</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>cloud1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>analyst2</pattern>
+		<template>Are you familiar with procedures for installing, upgrading, and developing software?
+      
+			<button>
+				<text>yes</text>
+				<postback>analyst3</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>cloud1</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>analyst3</pattern>
+		<template>Have you worked with databases before?
+      
+			<button>
+				<text>yes</text>
+				<postback>systemsAnalyst</postback>
+			</button>
+			<button>
+				<text>No</text>
+				<postback>architect1</postback>
+			</button>
+		</template>
+	</category>
+	
+<!--Offers careers based on questionairre answers-->
+<!--Cloud Computing Career-->
+<category>
+		<pattern>cloudComputing</pattern>
+		<template>
+            A career as a cloud computing engineer would be perfect for you!
+            This generally requires a 4-year degree and salaries average at $123K!
+			<button>
+				<text>Click here to learn more</text>
+				<url>https://study.com/articles/cloud_computing_specialist_job_description_salary.html </url>
+			</button>
+			<button>
+				<text>Not for you? Click here to go back to the questionairre</text>
+				<postback>architect1</postback>
+			</button>
+		</template>
+	</category>
+<!--Mobile App-->
+<category>
+		<pattern>mobileApp</pattern>
+		<template>
+            A career as a mobile application developer/designer would be perfect for you!
+            This generally requires a 2-year degree and salaries average at $93K!
+			<button>
+				<text>Click here to learn more</text>
+				<url>https://www.toptal.com/app/job-description  </url>
+			</button>
+			<button>
+				<text>Not for you? Click here to go back to the questionairre</text>
+				<postback>cloud1</postback>
+			</button>
+		</template>
+	</category>
+<!--Network Architect-->
+<category>
+		<pattern>networkArchitect</pattern>
+		<template>
+            A career as a Network Architect would be perfect for you!
+            This generally requires a 4-year degree and salaries average at $125K!
+			<button>
+				<text>Click here to learn more</text>
+				<url>https://www.fieldengineer.com/skills/what-is-a-network-architect </url>
+			</button>
+			<button>
+				<text>Not for you? Click here to go back to the questionairre</text>
+				<postback>mobile1</postback>
+			</button>
+		</template>
+	</category>
+<!--Software Developer-->
+<category>
+		<pattern>softwareDeveloper</pattern>
+		<template>
+            A career as a Software Developer would be perfect for you!
+            This generally requires a 4-year degree and salaries average at $87K!
+			<button>
+				<text>Click here to learn more</text>
+				<url>https://www.betterteam.com/software-developer-job-description </url>
+			</button>
+			<button>
+				<text>Not for you? Click here to go back to the questionairre</text>
+				<postback>analyst1</postback>
+			</button>
+		</template>
+	</category>
+<!--Sys Analyst-->
+<category>
+		<pattern>systemsAnalyst</pattern>
+		<template>
+            A career as a Systems Analyst would be perfect for you!
+            This generally requires a 2-year degree and salaries average at $81K!
+			<button>
+				<text>Click here to learn more</text>
+				<url>https://www.pcc.edu/hr/employment/job-archive/systems-analyst/ </url>
+			</button>
+			<button>
+				<text>Not for you? Click here to go back to the questionairre</text>
+				<postback>software1</postback>
+			</button>
+		</template>
+	</category>
+	
+	
+	<!--Catches invalid entries-->
+	<category>
+		<pattern>*</pattern>
+		<template>Please reword your request.</template>
+	</category>
+</aiml>
